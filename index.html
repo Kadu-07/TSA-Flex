@@ -1,12 +1,219 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSA</title>
     <link rel="stylesheet" href="./CSS/style.css">
-    <title>TSA - Soluções</title>
 </head>
+
 <body>
-    
+    <!-- HEADER -->
+
+    <header>
+        <div class="nome">TSA <span>- Soluções</span></div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            |
+            <a href="#produtos">Produtos</a>
+            |
+            <a href="#sobre">Sobre</a>
+            |
+            <a href="#contato">Contato</a>
+        </nav>
+
+    </header>
+
+    <!-- INICIO -->
+
+    <section id="inicio">
+
+        <div class="texto-inicio">
+
+            <span class="tag">
+                ESTAMPAS TERMOCOLANTES
+            </span>
+
+            <h1>
+                Personalize camisetas com <span>estampas profissionais</span>
+            </h1>
+
+            <p>
+                Otima qualidade, com aplicação fácil com ferro quente
+                e estampas modernas para transformar qualquer peça.
+            </p>
+
+            <div class="inicio-btn">
+                <button class="btn-primario">
+                    Comprar Agora
+                </button>
+
+                <button class="btn-secundario">
+                    Ver Catálogo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUTOS -->
+
+    <section id="produtos">
+        <h2>Nossos <span>Produtos</span></h2>
+
+        <p class="produtos-subtitulo">Estampas de alta qualidade para transformar qualquer peça</p>
+
+        <!--  CARROSSEL ESTAMPAS BÁSICAS -->
+
+        <h3>Estampas Básicas</h3>
+
+        <input checked class="carousel-radio" type="radio" name="basicas" id="b1">
+        <input class="carousel-radio" type="radio" name="basicas" id="b2">
+        <input class="carousel-radio" type="radio" name="basicas" id="b3">
+
+        <div class="carousel-container">
+
+            <!-- BOTÕES ANTERIOR -->
+            <label for="b1" class="carousel-btn-ant">&#8249;</label>  <!-- volta para b1, visível no slide 2 -->
+            <label for="b2" class="carousel-btn-ant">&#8249;</label>  <!-- volta para b2, visível no slide 3 -->
+            <label for="b3" class="carousel-btn-ant">&#8249;</label>  <!-- avança para b3, visível no slide 1-->
+
+            <!-- BOTÕES PRÓXIMO -->
+            <label for="b1" class="carousel-btn-prox">&#8250;</label>  <!-- volta para b1, visível no slide 3-->
+            <label for="b2" class="carousel-btn-prox">&#8250;</label>  <!-- avança para b2, visível no slide 1 -->
+            <label for="b3" class="carousel-btn-prox">&#8250;</label>  <!-- avança para b3, visível no slide 2 -->
+
+            <div class="carousel-faixa">
+
+                <div class="card">
+                    <img class="card-img" src="#" alt="Estampa #">
+                    <div class="card-body">
+                        <span class="card-tag">Básica</span>
+                        <div class="card-titulo">Estampa #</div>
+                        <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
+                        <div class="card-preco">R$ # <small>/ unid.</small></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="#" alt="Estampa #">
+                    <div class="card-body">
+                        <span class="card-tag">Básica</span>
+                        <div class="card-titulo">Estampa #</div>
+                        <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
+                        <div class="card-preco">R$ # <small>/ unid.</small></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="#" alt="Estampa #">
+                    <div class="card-body">
+                        <span class="card-tag">Básica</span>
+                        <div class="card-titulo">Estampa #</div>
+                        <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
+                        <div class="card-preco">R$ # <small>/ unid.</small></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="#" alt="Estampa #">
+                    <div class="card-body">
+                        <span class="card-tag">Básica</span>
+                        <div class="card-titulo">Estampa #</div>
+                        <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
+                        <div class="card-preco">R$ # <small>/ unid.</small></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="#" alt="Estampa #">
+                    <div class="card-body">
+                        <span class="card-tag">Básica</span>
+                        <div class="card-titulo">Estampa #</div>
+                        <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
+                        <div class="card-preco">R$ # <small>/ unid.</small></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="carousel-ponto">
+            <label for="b1"></label>
+            <label for="b2"></label>
+            <label for="b3"></label>
+        </div>
+
+        <!-- CARROSSEL ESTAMPAS PERSONALIZADAS -->
+
+        <h3>Estampas Personalizadas</h3>
+
+        <input checked class="carousel-radio" type="radio" name="personalizadas" id="p1">
+        <input class="carousel-radio" type="radio" name="personalizadas" id="p2">
+
+        <div class="carousel-container">
+
+            <!-- BOTÕES ANTERIOR -->
+            <label for="p1" class="carousel-btn-ant">&#8249;</label>  <!-- Avança para p2, visível no slide 1 -->
+            <label for="p2" class="carousel-btn-ant">&#8249;</label>  <!-- Volta para p1, visível no slide 2 -->
+
+            <!-- BOTÕES PRÓXIMO-->
+            <label for="p1" class="carousel-btn-prox">&#8250;</label>  <!-- Avança para p2, visível no slide 1 -->
+            <label for="p2" class="carousel-btn-prox">&#8250;</label>  <!-- Volta para p1, visível no slide 2 -->
+
+            <div class="carousel-faixa">
+
+                <div class="card">
+                    <img class="card-img" src="#" alt="Logo da Marca">
+                    <div class="card-body">
+                        <span class="card-tag">Personalizada</span>
+                        <div class="card-titulo">Logo da Marca</div>
+                        <div class="card-desc">Sua logo em alta definição, perfeita para uniformes.</div>
+                        <div class="card-preco">R$ # <small>/ unid.</small></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="#" alt="Arte Full Print">
+                    <div class="card-body">
+                        <span class="card-tag">Personalizada</span>
+                        <div class="card-titulo">Arte Full Print</div>
+                        <div class="card-desc">Estampa que cobre toda a peça com sua arte exclusiva.</div>
+                        <div class="card-preco">R$ # <small>/ unid.</small></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="#" alt="Nome e Número">
+                    <div class="card-body">
+                        <span class="card-tag">Personalizada</span>
+                        <div class="card-titulo">Nome + Número</div>
+                        <div class="card-desc">Ideal para times, eventos e uniformes esportivos.</div>
+                        <div class="card-preco">R$ # <small>/ unid.</small></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="#" alt="Ilustração Custom">
+                    <div class="card-body">
+                        <span class="card-tag">Personalizada</span>
+                        <div class="card-titulo">Ilustração Custom</div>
+                        <div class="card-desc">Envie sua arte e nós aplicamos com máxima fidelidade.</div>
+                        <div class="card-preco">R$ # <small>/ unid.</small></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="carousel-ponto">
+            <label for="p1"></label>
+            <label for="p2"></label>
+        </div>
+
+    </section>
+    <script src="script.js"></script>
 </body>
+
 </html>
