@@ -15,6 +15,10 @@ span {
     color: #38bdf8; 
 }
 
+a {
+    text-decoration: none;
+}
+
 .subtitulo {
     text-align: center;
     color: #94a3b8;
@@ -312,6 +316,13 @@ nav a {
     gap: 100px;
 }
 
+.container-video {
+    text-align: center;
+}
+
+.container-video video {
+    box-shadow: 0 0 15px white;
+}
 
 /* RESPONSIVIDADE NOTEBOOK */
 
