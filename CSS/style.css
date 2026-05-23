@@ -15,6 +15,11 @@ span {
     color: #38bdf8; 
 }
 
+.subtitulo {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 50px;
+}
 /* HEADER */
 
 
@@ -126,11 +131,11 @@ nav a {
     margin-bottom: 10px;
 }
 
-.produtos-subtitulo {
+/* .produtos-subtitulo {
     text-align: center;
     color: #94a3b8;
     margin-bottom: 50px;
-}
+} */
 
 #produtos h3 {
     font-size: 16px;
@@ -143,10 +148,6 @@ nav a {
 
 /* CARROSEL */
 
-.carousel-radio { 
-    display: none; 
-}
-
 .carousel-container {
     position: relative;
     overflow: hidden;
@@ -155,14 +156,14 @@ nav a {
 
 .carousel-faixa {
     display: flex;
+    gap: 20px;
     transition: transform .45s cubic-bezier(.4, 0, .2, 1);
 }
 
 /* CARDS DO CARROSEL */
 
 .card {
-    min-width: calc(33.333%);
-    padding-right: 20px;
+    min-width: calc((100% - 40px) / 3);
     flex-shrink: 0;
 }
 
@@ -227,28 +228,7 @@ nav a {
     margin-left: 3px; 
 }
 
-/* ── MOVER O CARROSEL ── */
-#b1:checked ~ .carousel-container .carousel-faixa { 
-    transform: translateX(0); 
-}
-
-#b2:checked ~ .carousel-container .carousel-faixa { 
-    transform: translateX(-33.333%); 
-}
-
-#b3:checked ~ .carousel-container .carousel-faixa { 
-    transform: translateX(-66.666%); 
-}
-
-#p1:checked ~ .carousel-container .carousel-faixa { 
-    transform: translateX(0); 
-}
-
-#p2:checked ~ .carousel-container .carousel-faixa { 
-    transform: translateX(-33.333%); 
-}
-
-/* ── BOTÕES ── */
+/* BOTÕES  */
 .carousel-btn-ant,
 .carousel-btn-prox {
     position: absolute;
@@ -284,30 +264,6 @@ nav a {
     right: 8px; 
 }
 
-/* BOTÕES */
-.carousel-btn-ant,
-.carousel-btn-prox {
-    display: none;
-}
-
-/* MOSTRAR O BOTÃO PRÓXIMO */
-#b1:checked ~ .carousel-container label[for="b2"].carousel-btn-prox,
-#b2:checked ~ .carousel-container label[for="b3"].carousel-btn-prox,
-#b3:checked ~ .carousel-container label[for="b1"].carousel-btn-prox,
-#p1:checked ~ .carousel-container label[for="p2"].carousel-btn-prox,
-#p2:checked ~ .carousel-container label[for="p1"].carousel-btn-prox { 
-    display: flex; 
-}
-
-/* ESCONDER O BOTÃO ANTERIOR */
-#b1:checked ~ .carousel-container label[for="b3"].carousel-btn-ant,
-#b2:checked ~ .carousel-container label[for="b1"].carousel-btn-ant,
-#b3:checked ~ .carousel-container label[for="b2"].carousel-btn-ant,
-#p1:checked ~ .carousel-container label[for="p2"].carousel-btn-ant,
-#p2:checked ~ .carousel-container label[for="p1"].carousel-btn-ant { 
-    display: flex; 
-}
-
 /* PONTOS */
 .carousel-ponto {
     display: flex;
@@ -317,29 +273,50 @@ nav a {
     margin-bottom: 8px;
 }
 
-.carousel-ponto label {
+.carousel-ponto button {
     width: 8px;
     height: 8px;
     border-radius: 50%;
     background: #334155;
+    border: none;
     cursor: pointer;
-    display: block;
+    padding: 0;
     transition: background .3s, transform .3s;
 }
 
-#b1:checked ~ .carousel-ponto label[for="b1"],
-#b2:checked ~ .carousel-ponto label[for="b2"],
-#b3:checked ~ .carousel-ponto label[for="b3"],
-#p1:checked ~ .carousel-ponto label[for="p1"],
-#p2:checked ~ .carousel-ponto label[for="p2"] {
+.carousel-ponto button.ativo {
     background: #38bdf8;
     transform: scale(1.4);
 }
 
+/* SOBRE */
+
+#sobre {
+    scroll-margin-top: 75px;
+    padding: 80px 8%;
+}
+
+#sobre h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sobre_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    overflow: auto;
+    text-align: justify;
+    box-sizing: border-box;
+    gap: 100px;
+}
+
+
 /* RESPONSIVIDADE NOTEBOOK */
 
 @media screen and (max-width: 1280px) {
-
+   
 }
 
 /* RESPONSIVIDADE CELULAR */
