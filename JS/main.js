@@ -65,3 +65,14 @@ document.querySelectorAll('.carousel').forEach(carousel => {
     criarPontos();
     irPara(0);
 });
+
+function enviarFormulario(e) {
+    e.preventDefault();
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const assunto = document.getElementById('assunto').value;
+    const mensagem = document.getElementById('mensagem').value;
+    const texto = `Olá! Me chamo *${nome}* (${email}).\n\n*Assunto:* ${assunto}\n\n${mensagem}`;
+    const url = `https://wa.me/55XXXXXXX?text=${encodeURIComponent(texto)}`;
+    window.open(url, '_blank');
+}
