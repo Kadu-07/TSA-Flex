@@ -14,16 +14,21 @@
     <header>
         <div class="nome">TSA <span>- Soluções</span></div>
 
-        <nav>
-            <a href="#inicio">Início</a>
-            |
-            <a href="#produtos">Produtos</a>
-            |
-            <a href="#sobre">Sobre</a>
-            |
-            <a href="#contato">Contato</a>
-        </nav>
+        <div class="navbar">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
 
+
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <p>|</p>
+                <li><a href="#produtos">Produtos</a></li>
+                <p>|</p>
+                <li><a href="#sobre">Sobre</a></li>
+                <p>|</p>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
     </header>
 
     <!-- INICIO -->
@@ -50,9 +55,9 @@
                     Comprar Agora
                 </button>
 
-                <button class="btn-secundario">
+                <a href="#produtos" class="btn-secundario">
                     Ver Catálogo
-                </button>
+                </a>
             </div>
         </div>
     </section>
@@ -62,158 +67,288 @@
     <section id="produtos">
         <h2>Nossos <span>Produtos</span></h2>
 
-        <p class="produtos-subtitulo">Estampas de alta qualidade para transformar qualquer peça</p>
+        <p class="subtitulo">Estampas de alta qualidade para transformar qualquer peça</p>
 
         <!--  CARROSSEL ESTAMPAS BÁSICAS -->
 
         <h3>Estampas Básicas</h3>
 
-        <input checked class="carousel-radio" type="radio" name="basicas" id="b1">
-        <input class="carousel-radio" type="radio" name="basicas" id="b2">
-        <input class="carousel-radio" type="radio" name="basicas" id="b3">
+        <div class="carousel">
+            <div class="carousel-container">
 
-        <div class="carousel-container">
+                <button class="carousel-btn-ant">&#8249;</button>
+                <button class="carousel-btn-prox">&#8250;</button>
 
-            <!-- BOTÕES ANTERIOR -->
-            <label for="b1" class="carousel-btn-ant">&#8249;</label>  <!-- volta para b1, visível no slide 2 -->
-            <label for="b2" class="carousel-btn-ant">&#8249;</label>  <!-- volta para b2, visível no slide 3 -->
-            <label for="b3" class="carousel-btn-ant">&#8249;</label>  <!-- avança para b3, visível no slide 1-->
+                <div class="carousel-faixa">
 
-            <!-- BOTÕES PRÓXIMO -->
-            <label for="b1" class="carousel-btn-prox">&#8250;</label>  <!-- volta para b1, visível no slide 3-->
-            <label for="b2" class="carousel-btn-prox">&#8250;</label>  <!-- avança para b2, visível no slide 1 -->
-            <label for="b3" class="carousel-btn-prox">&#8250;</label>  <!-- avança para b3, visível no slide 2 -->
-
-            <div class="carousel-faixa">
-
-                <div class="card">
-                    <img class="card-img" src="#" alt="Estampa #">
-                    <div class="card-body">
-                        <span class="card-tag">Básica</span>
-                        <div class="card-titulo">Estampa #</div>
-                        <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
-                        <div class="card-preco">R$ # <small>/ unid.</small></div>
+                    <div class="card">
+                        <img class="card-img" src="#" alt="Estampa #">
+                        <div class="card-body">
+                            <span class="card-tag">Básica</span>
+                            <div class="card-titulo">Estampa #</div>
+                            <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
+                            <div class="card-preco">R$ # <small>/ unid.</small></div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="card">
-                    <img class="card-img" src="#" alt="Estampa #">
-                    <div class="card-body">
-                        <span class="card-tag">Básica</span>
-                        <div class="card-titulo">Estampa #</div>
-                        <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
-                        <div class="card-preco">R$ # <small>/ unid.</small></div>
+                    <div class="card">
+                        <img class="card-img" src="#" alt="Estampa #">
+                        <div class="card-body">
+                            <span class="card-tag">Básica</span>
+                            <div class="card-titulo">Estampa #</div>
+                            <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
+                            <div class="card-preco">R$ # <small>/ unid.</small></div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="card">
-                    <img class="card-img" src="#" alt="Estampa #">
-                    <div class="card-body">
-                        <span class="card-tag">Básica</span>
-                        <div class="card-titulo">Estampa #</div>
-                        <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
-                        <div class="card-preco">R$ # <small>/ unid.</small></div>
+                    <div class="card">
+                        <img class="card-img" src="#" alt="Estampa #">
+                        <div class="card-body">
+                            <span class="card-tag">Básica</span>
+                            <div class="card-titulo">Estampa #</div>
+                            <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
+                            <div class="card-preco">R$ # <small>/ unid.</small></div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="card">
-                    <img class="card-img" src="#" alt="Estampa #">
-                    <div class="card-body">
-                        <span class="card-tag">Básica</span>
-                        <div class="card-titulo">Estampa #</div>
-                        <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
-                        <div class="card-preco">R$ # <small>/ unid.</small></div>
+                    <div class="card">
+                        <img class="card-img" src="#" alt="Estampa #">
+                        <div class="card-body">
+                            <span class="card-tag">Básica</span>
+                            <div class="card-titulo">Estampa #</div>
+                            <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
+                            <div class="card-preco">R$ # <small>/ unid.</small></div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="card">
-                    <img class="card-img" src="#" alt="Estampa #">
-                    <div class="card-body">
-                        <span class="card-tag">Básica</span>
-                        <div class="card-titulo">Estampa #</div>
-                        <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
-                        <div class="card-preco">R$ # <small>/ unid.</small></div>
+                    <div class="card">
+                        <img class="card-img" src="#" alt="Estampa #">
+                        <div class="card-body">
+                            <span class="card-tag">Básica</span>
+                            <div class="card-titulo">Estampa #</div>
+                            <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
+                            <div class="card-preco">R$ # <small>/ unid.</small></div>
+                        </div>
                     </div>
-                </div>
 
+                </div>
             </div>
-        </div>
 
-        <div class="carousel-ponto">
-            <label for="b1"></label>
-            <label for="b2"></label>
-            <label for="b3"></label>
+            <div class="carousel-ponto"></div>
         </div>
 
         <!-- CARROSSEL ESTAMPAS PERSONALIZADAS -->
 
         <h3>Estampas Personalizadas</h3>
 
-        <input checked class="carousel-radio" type="radio" name="personalizadas" id="p1">
-        <input class="carousel-radio" type="radio" name="personalizadas" id="p2">
+        <div class="carousel">
+            <div class="carousel-container">
 
-        <div class="carousel-container">
+                <button class="carousel-btn-ant">&#8249;</button>
+                <button class="carousel-btn-prox">&#8250;</button>
 
-            <!-- BOTÕES ANTERIOR -->
-            <label for="p1" class="carousel-btn-ant">&#8249;</label>  <!-- Avança para p2, visível no slide 1 -->
-            <label for="p2" class="carousel-btn-ant">&#8249;</label>  <!-- Volta para p1, visível no slide 2 -->
+                <div class="carousel-faixa">
 
-            <!-- BOTÕES PRÓXIMO-->
-            <label for="p1" class="carousel-btn-prox">&#8250;</label>  <!-- Avança para p2, visível no slide 1 -->
-            <label for="p2" class="carousel-btn-prox">&#8250;</label>  <!-- Volta para p1, visível no slide 2 -->
-
-            <div class="carousel-faixa">
-
-                <div class="card">
-                    <img class="card-img" src="#" alt="Logo da Marca">
-                    <div class="card-body">
-                        <span class="card-tag">Personalizada</span>
-                        <div class="card-titulo">Logo da Marca</div>
-                        <div class="card-desc">Sua logo em alta definição, perfeita para uniformes.</div>
-                        <div class="card-preco">R$ # <small>/ unid.</small></div>
+                    <div class="card">
+                        <img class="card-img" src="#" alt="Logo da Marca">
+                        <div class="card-body">
+                            <span class="card-tag">Personalizada</span>
+                            <div class="card-titulo">Logo da Marca</div>
+                            <div class="card-desc">Sua logo em alta definição, perfeita para uniformes.</div>
+                            <div class="card-preco">R$ # <small>/ unid.</small></div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="card">
-                    <img class="card-img" src="#" alt="Arte Full Print">
-                    <div class="card-body">
-                        <span class="card-tag">Personalizada</span>
-                        <div class="card-titulo">Arte Full Print</div>
-                        <div class="card-desc">Estampa que cobre toda a peça com sua arte exclusiva.</div>
-                        <div class="card-preco">R$ # <small>/ unid.</small></div>
+                    <div class="card">
+                        <img class="card-img" src="#" alt="Arte Full Print">
+                        <div class="card-body">
+                            <span class="card-tag">Personalizada</span>
+                            <div class="card-titulo">Arte Full Print</div>
+                            <div class="card-desc">Estampa que cobre toda a peça com sua arte exclusiva.</div>
+                            <div class="card-preco">R$ # <small>/ unid.</small></div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="card">
-                    <img class="card-img" src="#" alt="Nome e Número">
-                    <div class="card-body">
-                        <span class="card-tag">Personalizada</span>
-                        <div class="card-titulo">Nome + Número</div>
-                        <div class="card-desc">Ideal para times, eventos e uniformes esportivos.</div>
-                        <div class="card-preco">R$ # <small>/ unid.</small></div>
+                    <div class="card">
+                        <img class="card-img" src="#" alt="Nome e Número">
+                        <div class="card-body">
+                            <span class="card-tag">Personalizada</span>
+                            <div class="card-titulo">Nome + Número</div>
+                            <div class="card-desc">Ideal para times, eventos e uniformes esportivos.</div>
+                            <div class="card-preco">R$ # <small>/ unid.</small></div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="card">
-                    <img class="card-img" src="#" alt="Ilustração Custom">
-                    <div class="card-body">
-                        <span class="card-tag">Personalizada</span>
-                        <div class="card-titulo">Ilustração Custom</div>
-                        <div class="card-desc">Envie sua arte e nós aplicamos com máxima fidelidade.</div>
-                        <div class="card-preco">R$ # <small>/ unid.</small></div>
+                    <div class="card">
+                        <img class="card-img" src="#" alt="Ilustração Custom">
+                        <div class="card-body">
+                            <span class="card-tag">Personalizada</span>
+                            <div class="card-titulo">Ilustração Custom</div>
+                            <div class="card-desc">Envie sua arte e nós aplicamos com máxima fidelidade.</div>
+                            <div class="card-preco">R$ # <small>/ unid.</small></div>
+                        </div>
                     </div>
-                </div>
 
+                </div>
             </div>
-        </div>
 
-        <div class="carousel-ponto">
-            <label for="p1"></label>
-            <label for="p2"></label>
+            <div class="carousel-ponto"></div>
         </div>
 
     </section>
-    <script src="script.js"></script>
+    
+    <!-- SOBRE -->
+
+    <section id="sobre">
+        <h2>Seja bem vindo a <span>TSA - Soluções</span></h2>
+
+        <p class="subtitulo">Conheça um pouco sobre nós</p>
+
+        <div class="sobre_container">
+            <img src="#" alt="Imagem sobre a empresa">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora error minima a similique, eaque, sequi
+                necessitatibus et vero molestiae iste quasi beatae fugiat in atque dicta natus rem non exercitationem?
+                Perspiciatis accusamus ipsum explicabo iste asperiores laudantium, voluptates error voluptatibus cumque
+                maxime, libero ipsa aspernatur ipsam voluptatum, veniam voluptate adipisci. Eveniet libero fuga, optio
+                debitis ut minus accusantium eos tenetur at unde distinctio nostrum officia id adipisci illo dolorum
+                atque, ullam deleniti omnis quam! Atque eum blanditiis sequi iusto, aut sunt! Dolores impedit
+                perferendis quam id harum. Sunt, quae ut facere dolorum reprehenderit laborum temporibus, sequi, quaerat
+                iusto praesentium optio.</p>
+        </div>
+
+        <div class="sobre_container2">
+
+            <div class="sub_sobre1">
+                <h2>Um pouco sobre as estampas <span>dft têxtil</span> </h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis magnam laboriosam rem nihil hic blanditiis deleniti, eaque iste id reiciendis labore adipisci fugit, neque esse veniam, earum aliquid ipsam consequatur eos vel et modi. Libero voluptates quisquam corporis, eaque exercitationem, magnam odit, velit suscipit officiis qui neque! Laboriosam aliquam quod facere nisi dignissimos accusantium earum laborum autem numquam, libero aperiam eaque error? Libero, ut modi! Doloribus, quisquam necessitatibus recusandae deleniti nihil explicabo saepe fuga qui possimus aperiam omnis aspernatur facere ipsa quibusdam, obcaecati perspiciatis sequi repellendus nam deserunt molestias architecto ea asperiores. Nostrum nobis, molestias labore sint eos totam dolorem.</p>
+            </div>
+
+            <div class="sub_sobre2">
+                <h2>Como aplicar a <span>estampa</span></h2>
+                
+                <p class="subtitulo">Veja um vídeo exemplificando de como aplicar a estampa</p>
+
+
+
+                <div class="container-video">
+                    <video src="./ASSETS/TUTORIAL -  COMO APLICAR ESTAMPA DTF COM  FERRO DE PASSAR.mp4" controls width="350"></video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+
+    <section id="contato">
+        <h2>Entre em <span>Contato</span></h2>
+        <p class="subtitulo">Tire suas dúvidas ou faça seu pedido diretamente</p>
+
+        <div class="contato-container">
+
+            <div class="contato-info">
+                <h3>Fale com a gente</h3>
+                <p>Atendemos por WhatsApp ou e-mail. Resposta rápida nos dias úteis.</p>
+
+                <div class="contato-item">
+                    <div class="contato-icone">💬</div>
+                    <div>
+                        <strong>WhatsApp</strong>
+                        <a href="https://wa.me/55XXXXXX" target="_blank">(XX) XXXXX-XXXX</a>
+                    </div>
+                </div>
+
+                <div class="contato-item">
+                    <div class="contato-icone">📧</div>
+                    <div>
+                        <strong>E-mail</strong>
+                        <a href="mailto:XXXX">contato@tsa.com.br</a>
+                    </div>
+                </div>
+
+                <div class="contato-item">
+                    <div class="contato-icone local">📍</div>
+                    <div>
+                        <strong>Localização</strong>
+                        <span>Porto Alegre, RS</span>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/55XXXXXXX" target="_blank" class="btn-whatsapp">
+                    Chamar no WhatsApp
+                </a>
+            </div>
+
+            <form class="contato-form" onsubmit="enviarFormulario(event)">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" placeholder="Seu nome completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="assunto">Assunto</label>
+                    <select id="assunto">
+                        <option value="">Selecione um assunto</option>
+                        <option value="orcamento">Orçamento</option>
+                        <option value="duvida">Dúvida sobre produto</option>
+                        <option value="personalizado">Estampa personalizada</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" rows="4" placeholder="Descreva seu pedido ou dúvida..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primario btn-form">Enviar mensagem</button>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-marca">
+                <div class="nome">TSA <span>- Soluções</span></div>
+                <p>Estampas termocolantes de qualidade para transformar qualquer peça.</p>
+            </div>
+
+            <div class="footer-links">
+                <strong>Navegação</strong>
+                <a href="#inicio">Início</a>
+                <a href="#produtos">Produtos</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </div>
+
+            <div class="footer-links">
+                <strong>Redes Sociais</strong>
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">Facebook</a>
+                <a href="https://wa.me/55XXXXXX" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 TSA - Soluções. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+
+    <a href="https://wa.me/5551990157080" class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="white">
+            <path d="M16 0C7.163 0 0 7.163 0 16c0 2.827.737 5.48 2.027 7.785L0 32l8.418-2.007A15.93 15.93 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.07 22.26c-.34.953-1.99 1.826-2.742 1.943-.72.112-1.625.159-2.623-.165a23.9 23.9 0 0 1-2.372-.876C12.2 21.4 9.9 18.3 9.72 18.06c-.18-.24-1.46-1.94-1.46-3.7s.924-2.628 1.252-2.986c.328-.358.716-.448.955-.448.238 0 .477.002.685.013.22.012.515-.083.806.615.298.716 1.013 2.476 1.102 2.655.09.18.15.39.03.63-.12.24-.18.39-.358.598-.18.21-.378.468-.539.629-.18.18-.367.374-.157.733.209.358.929 1.528 1.993 2.474 1.368 1.22 2.522 1.597 2.882 1.776.358.18.567.15.776-.09.209-.24.895-1.044 1.134-1.403.239-.358.478-.299.806-.18.328.12 2.085.984 2.443 1.163.358.18.597.269.686.418.09.15.09.868-.25 1.822z"/>
+        </svg>
+    </a>
+    <script src="./JS/main.js"></script>
 </body>
 
 </html>

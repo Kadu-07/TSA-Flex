@@ -1,1 +1,0 @@
-Aqui ficará todos os assets como as imagens
