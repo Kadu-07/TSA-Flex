@@ -14,7 +14,7 @@ document.querySelectorAll('.carousel').forEach(carousel => {
         return 3;
     }
 
-    // Total de slides (cada "passo" avança 1 card)
+    // Total de slides
     function totalSlides() {
         return cards.length - visiveis();
     }
