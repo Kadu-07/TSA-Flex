@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TSA</title>
     <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="shortcut icon" href="./ASSETS/Rolinho_DFT.png" type="image/x-icon">
 </head>
 
 <body>
     <!-- HEADER -->
 
     <header>
-        <div class="nome">TSA <span>- Soluções</span></div>
+        <img src="./ASSETS/Logo TSA - SOLUÇÕES.png" alt="TSA - Soluções">
 
         <div class="navbar">
             <input type="checkbox" id="menu-toggle">
@@ -55,7 +56,7 @@
                     Comprar Agora
                 </button>
 
-                <a href="#produtos" class="btn-secundario">
+                <a href="#catalago" class="btn-secundario">
                     Ver Catálogo
                 </a>
             </div>
@@ -65,7 +66,18 @@
     <!-- PRODUTOS -->
 
     <section id="produtos">
-        <h2>Nossos <span>Produtos</span></h2>
+
+        <div class="container">
+            <img src="#" alt="imagem aleatória ai">
+            <div class="container_dentro">
+                <h2>titulo <span>maneiro</span></h2>
+                <p>Descubra uma nova maneira de vestir-se com personalidade. Explore nossa linha de produtos e encontre o perfeito para cada momento e ocasião. Na Printze, a moda é mais do que vestuário, é uma declaração de estilo e autenticidade. Sua criatividade não tem limites, com uma vasta gama de opções de designs, cores e estilos disponíveis em nossa linha de produtos você pode personalizar cada item de acordo com seus desejos e necessidades.</p>
+
+                <p>Na Printze, estamos empenhados em fornecer produtos que atendam às suas expectativas de qualidade e estilo. Cada peça é feita sob demanda, garantindo que você receba exatamente o que imaginou, com cores vibrantes e detalhes impressionantes. Acesse nosso Catálogo de Produtos.</p>
+            </div>
+        </div>
+
+        <h2 id="catalago">Nosso <span>catálogo</span></h2>
 
         <p class="subtitulo">Estampas de alta qualidade para transformar qualquer peça</p>
 
@@ -204,7 +216,7 @@
 
         <p class="subtitulo">Conheça um pouco sobre nós</p>
 
-        <div class="sobre_container">
+        <div class="container">
             <img src="#" alt="Imagem sobre a empresa">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora error minima a similique, eaque, sequi
                 necessitatibus et vero molestiae iste quasi beatae fugiat in atque dicta natus rem non exercitationem?
@@ -216,14 +228,14 @@
                 iusto praesentium optio.</p>
         </div>
 
-        <div class="sobre_container2">
+        <div class="container">
 
-            <div class="sub_sobre1">
+            <div class="container_dentro">
                 <h2>Um pouco sobre as estampas <span>dft têxtil</span> </h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis magnam laboriosam rem nihil hic blanditiis deleniti, eaque iste id reiciendis labore adipisci fugit, neque esse veniam, earum aliquid ipsam consequatur eos vel et modi. Libero voluptates quisquam corporis, eaque exercitationem, magnam odit, velit suscipit officiis qui neque! Laboriosam aliquam quod facere nisi dignissimos accusantium earum laborum autem numquam, libero aperiam eaque error? Libero, ut modi! Doloribus, quisquam necessitatibus recusandae deleniti nihil explicabo saepe fuga qui possimus aperiam omnis aspernatur facere ipsa quibusdam, obcaecati perspiciatis sequi repellendus nam deserunt molestias architecto ea asperiores. Nostrum nobis, molestias labore sint eos totam dolorem.</p>
             </div>
 
-            <div class="sub_sobre2">
+            <div class="container_dentro">
                 <h2>Como aplicar a <span>estampa</span></h2>
                 
                 <p class="subtitulo">Veja um vídeo exemplificando de como aplicar a estampa</p>
@@ -279,9 +291,12 @@
             </div>
 
             <form class="contato-form" onsubmit="enviarFormulario(event)">
-                <div class="form-group">
+                <div class="form-group form-group-nome">
                     <label for="nome">Nome</label>
-                    <input type="text" id="nome" placeholder="Seu nome completo" required>
+                    <input type="text" id="nome" placeholder="Seu nome" required>
+
+                    <label for="sobrenome">Sobrenome</label>
+                    <input type="text" id="sobrenome" placeholder="Seu sobrenome" required>
                 </div>
 
                 <div class="form-group">

@@ -69,10 +69,11 @@ document.querySelectorAll('.carousel').forEach(carousel => {
 function enviarFormulario(e) {
     e.preventDefault();
     const nome = document.getElementById('nome').value;
+    const sobrenome = document.getElementById('sobrenome').value;
     const email = document.getElementById('email').value;
     const assunto = document.getElementById('assunto').value;
     const mensagem = document.getElementById('mensagem').value;
-    const texto = `Olá! Me chamo *${nome}* (${email}).\n\n*Assunto:* ${assunto}\n\n${mensagem}`;
-    const url = `https://wa.me/55XXXXXXX?text=${encodeURIComponent(texto)}`;
+    const texto = `Olá! Me chamo *${nome}* *${sobrenome} (${email}).\n\n*Assunto:* ${assunto}\n\n${mensagem}`;
+    const url = `https://wa.me/5551990157080?text=${encodeURIComponent(texto)}`;
     window.open(url, '_blank');
 }
