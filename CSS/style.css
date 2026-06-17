@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     background: #0f172a;
     color: white;
 }
@@ -14,7 +14,9 @@ body {
 span { 
     color: #38bdf8; 
 }
-
+h1, h2, h3, .logo {
+    font-family: 'Montserrat', sans-serif;
+}
 a {
     text-decoration: none;
     transition: color .2s;
@@ -43,15 +45,21 @@ li {
     gap: 100px;
 }
 
+.container img {
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+}
+
 .container_dentro {
     text-align: justify;
+    align-self: center;
 }
 
 .container_dentro p {
     margin-bottom: 40px;
 }
 /* HEADER */
-
 
 header {
     width: 100%;
@@ -72,8 +80,8 @@ header {
 }
 
 header img {
-    margin: -100px 0px -100px 0px;
-    width: 200px;
+    margin: -88px 0px -100px 0px;
+    width: 180px;
     filter: saturate(310%) hue-rotate(320deg);
     pointer-events: none;
 }
@@ -106,17 +114,41 @@ header img {
 
 /* INICIO */
 
+#inicio::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    
+    background: 
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            rgba(15, 23, 42)
+        ),
+        linear-gradient(
+            to right,
+            rgba(15, 23, 42, 0.95) 35%,
+            rgba(15, 23, 42, 0.3) 100%
+        );
+    z-index: 0;
+}
+
 #inicio {
     min-height: 100vh;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 140px 8% 80px;
+    background-image: url('../ASSETS/Imagem\ Inicio.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .texto-inicio {
     max-width: 600px;
+    z-index: 1;
 }
 
 .tag {
@@ -177,12 +209,6 @@ header img {
     text-align: center;
     margin-bottom: 10px;
 }
-
-/* .produtos-subtitulo {
-    text-align: center;
-    color: #94a3b8;
-    margin-bottom: 50px;
-} */
 
 #produtos h3 {
     font-size: 16px;
@@ -352,6 +378,12 @@ header img {
     font-size: 36px;
     text-align: center;
     margin-bottom: 10px;
+}
+
+#sobre .container_dentro:nth-child(1) {
+    /* align-self: center; */
+    /* margin-top: 250px; */
+    max-width: 60%;
 }
 
 .container-video {
@@ -636,6 +668,15 @@ a:hover {
 
 @media screen and (max-width: 768px) {
 
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #inicio {
+        background-image: none;
+    }
+
     .texto-inicio h1 {
         font-size: 42px;
         line-height: 1.1;
@@ -677,14 +718,6 @@ a:hover {
         visibility: visible;
         transform: translateX(0%);
         transition: transform 0.3s ease;
-    }
-
-    .sobre_container {
-        flex-wrap: wrap;
-    }
-
-    .sobre_container2 {
-        flex-wrap: wrap;
     }
 
     .contato-container {
