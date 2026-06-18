@@ -77,3 +77,9 @@ function enviarFormulario(e) {
     const url = `https://wa.me/5551990157080?text=${encodeURIComponent(texto)}`;
     window.open(url, '_blank');
 }
+
+function desactive() {
+    if (document.getElementById('menu-toggle').checked == true) {
+        document.getElementById('menu-toggle').checked = false
+    }
+}
