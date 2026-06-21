@@ -10,16 +10,8 @@
 
     <!-- FONTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -40,6 +32,23 @@
                 <li><a onclick="desactive()" href="#produtos">Produtos</a></li>
                 <li><a onclick="desactive()" href="#sobre">Sobre</a></li>
                 <li><a onclick="desactive()" href="#contato">Contato</a></li>
+                <li><button id="theme-toggle" aria-label="Alternar tema claro/escuro">
+                        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"/>
+                            <line x1="12" y1="1" x2="12" y2="3"/>
+                            <line x1="12" y1="21" x2="12" y2="23"/>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                            <line x1="1" y1="12" x2="3" y2="12"/>
+                            <line x1="21" y1="12" x2="23" y2="12"/>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                    </button>
+                </li>
             </ul>
         </div>
     </header>
@@ -81,7 +90,7 @@
     <section id="produtos">
 
         <div class="container">
-            <img src="ASSETS/Mockup_Camisa_TSA_Flex_v2.png" alt="imagem aleatória ai">
+            <img src="ASSETS/Mockup_Camisa_Estampas_Juntas.png" alt="imagem aleatória ai">
             <div class="container_dentro">
                 <h2>Lhe apresentamos <span>DTF Textil</span>!</h2>
                 <p>O DTF Têxtil (Direct to Film) é uma tecnologia moderna de personalização que permite transferir estampas para diferentes tipos de tecidos com alta qualidade e precisão. As artes são impressas em um filme especial e aplicadas através de calor, garantindo cores vibrantes, excelente definição e um acabamento profissional. Essa versatilidade torna o DTF uma ótima opção para camisetas, moletons, uniformes, peças promocionais e muito mais.</p> 
@@ -97,7 +106,7 @@
 
             <!--  CARROSSEL ESTAMPAS BÁSICAS -->
 
-            <h3 style="text-align: center;">Estampas Básicas</h3>
+            <h3 style="text-align: center;">PRODUTOS</h3>
 
             <div class="carousel">
                 <div class="carousel-container">
@@ -110,8 +119,8 @@
                         <div class="card">
                             <img class="card-img" src="#" alt="Estampa #">
                             <div class="card-body">
-                                <span class="card-tag">Básica</span>
-                                <div class="card-titulo">Estampa #</div>
+                                <span class="card-tag">Personalizadas</span>
+                                <div class="card-titulo">Camisetas</div>
                                 <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
                                 <div class="card-preco">R$ # <small>/ unid.</small></div>
                             </div>
@@ -120,8 +129,8 @@
                         <div class="card">
                             <img class="card-img" src="#" alt="Estampa #">
                             <div class="card-body">
-                                <span class="card-tag">Básica</span>
-                                <div class="card-titulo">Estampa #</div>
+                                <span class="card-tag">Personalizadas</span>
+                                <div class="card-titulo">Street Wear</div>
                                 <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
                                 <div class="card-preco">R$ # <small>/ unid.</small></div>
                             </div>
@@ -130,8 +139,8 @@
                         <div class="card">
                             <img class="card-img" src="#" alt="Estampa #">
                             <div class="card-body">
-                                <span class="card-tag">Básica</span>
-                                <div class="card-titulo">Estampa #</div>
+                                <span class="card-tag">Personalizadas</span>
+                                <div class="card-titulo">Baby Looks</div>
                                 <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
                                 <div class="card-preco">R$ # <small>/ unid.</small></div>
                             </div>
@@ -140,8 +149,8 @@
                         <div class="card">
                             <img class="card-img" src="#" alt="Estampa #">
                             <div class="card-body">
-                                <span class="card-tag">Básica</span>
-                                <div class="card-titulo">Estampa #</div>
+                                <span class="card-tag">Personalizadas</span>
+                                <div class="card-titulo">Plus Size</div>
                                 <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
                                 <div class="card-preco">R$ # <small>/ unid.</small></div>
                             </div>
@@ -150,8 +159,64 @@
                         <div class="card">
                             <img class="card-img" src="#" alt="Estampa #">
                             <div class="card-body">
-                                <span class="card-tag">Básica</span>
-                                <div class="card-titulo">Estampa #</div>
+                                <span class="card-tag">Personalizadas</span>
+                                <div class="card-titulo">Infantis</div>
+                                <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
+                                <div class="card-preco">R$ # <small>/ unid.</small></div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="card-img" src="#" alt="Estampa #">
+                            <div class="card-body">
+                                <span class="card-tag">Personalizadas</span>
+                                <div class="card-titulo">Over Sized</div>
+                                <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
+                                <div class="card-preco">R$ # <small>/ unid.</small></div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="card-img" src="#" alt="Estampa #">
+                            <div class="card-body">
+                                <span class="card-tag">Personalizadas</span>
+                                <div class="card-titulo">Regatas</div>
+                                <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
+                                <div class="card-preco">R$ # <small>/ unid.</small></div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img" src="#" alt="Estampa #">
+                            <div class="card-body">
+                                <span class="card-tag">Personalizadas</span>
+                                <div class="card-titulo">Gola Polo</div>
+                                <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
+                                <div class="card-preco">R$ # <small>/ unid.</small></div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img" src="#" alt="Estampa #">
+                            <div class="card-body">
+                                <span class="card-tag">Personalizadas</span>
+                                <div class="card-titulo">Moletons</div>
+                                <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
+                                <div class="card-preco">R$ # <small>/ unid.</small></div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img" src="#" alt="Estampa #">
+                            <div class="card-body">
+                                <span class="card-tag">Personalizadas</span>
+                                <div class="card-titulo">Aventais</div>
+                                <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
+                                <div class="card-preco">R$ # <small>/ unid.</small></div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img" src="#" alt="Estampa #">
+                            <div class="card-body">
+                                <span class="card-tag">Personalizadas</span>
+                                <div class="card-titulo">Eco Bag</div>
                                 <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
                                 <div class="card-preco">R$ # <small>/ unid.</small></div>
                             </div>
@@ -176,7 +241,7 @@
                     <div class="carousel-faixa">
 
                         <div class="card">
-                            <img class="card-img" src="#" alt="Logo da Marca">
+                            <img class="card-img" src="ASSETS/Logo_da_Marca.png" alt="Logo da Marca">
                             <div class="card-body">
                                 <span class="card-tag">Personalizada</span>
                                 <div class="card-titulo">Logo da Marca</div>
@@ -186,7 +251,7 @@
                         </div>
 
                         <div class="card">
-                            <img class="card-img" src="#" alt="Arte Full Print">
+                            <img class="card-img" src="ASSETS/Arte_Full_Print.png" alt="Arte Full Print">
                             <div class="card-body">
                                 <span class="card-tag">Personalizada</span>
                                 <div class="card-titulo">Arte Full Print</div>
@@ -196,7 +261,7 @@
                         </div>
 
                         <div class="card">
-                            <img class="card-img" src="#" alt="Nome e Número">
+                            <img class="card-img" src="ASSETS/Nome__Numero.png" alt="Nome e Número">
                             <div class="card-body">
                                 <span class="card-tag">Personalizada</span>
                                 <div class="card-titulo">Nome + Número</div>
@@ -206,7 +271,7 @@
                         </div>
 
                         <div class="card">
-                            <img class="card-img" src="#" alt="Ilustração Custom">
+                            <img class="card-img" src="ASSETS/Ilustracao_Custom.png" alt="Ilustração Custom">
                             <div class="card-body">
                                 <span class="card-tag">Personalizada</span>
                                 <div class="card-titulo">Ilustração Custom</div>
@@ -232,20 +297,22 @@
         <p class="subtitulo">Conheça um pouco sobre nós</p>
 
         <div class="container">
-            <img src="#" alt="Imagem sobre a empresa">
+
+            <img src="./ASSETS/Logo TSA - Flex Dark Mode.png" alt="Logo da empresa">
             <div class="container_dentro">
                 <p>Nossas estampas DTF são produzidas com alta qualidade para garantir cores vivas, riqueza de detalhes e longa durabilidade. Ideais para camisetas, moletons, uniformes e diversas peças têxteis, elas proporcionam um acabamento profissional e fácil aplicação, ajudando você a transformar qualquer ideia em um produto exclusivo.</p>
                 <p>Nosso compromisso é unir qualidade, agilidade e atendimento personalizado para garantir que cada projeto receba a atenção necessária. Trabalhamos com materiais de excelente desempenho, cores vibrantes e acabamentos duráveis, buscando sempre entregar resultados que superem as expectativas dos nossos clientes.</p>
             </div>
+            
         </div>
 
         <div class="container">
 
             <div class="container_dentro">
                 <h2>Um pouco sobre as estampas <span>dft têxtil</span> </h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus ab nisi cumque corporis tempora impedit neque possimus quasi totam tenetur sint laborum expedita, fuga tempore nobis quis temporibus vero fugit dolorem ipsa amet a quo ipsam. Modi provident eum explicabo eaque tenetur rem inventore ut sit fuga sed non quis in possimus officia nostrum doloribus, excepturi cum ullam veniam nihil. Voluptatem sed accusantium, temporibus aperiam hic repudiandae dolor vero error, ex ratione, voluptate nulla nesciunt excepturi saepe quia alias. Deleniti cumque a soluta aperiam vel et itaque delectus ullam sunt? Neque tempore illo maxime fugit, aliquam eaque corporis delectus expedita dolorum autem, consequuntur officia molestiae asperiores porro odio repellendus. Necessitatibus accusamus debitis incidunt quia aspernatur eos sapiente illo architecto consequuntur inventore assumenda cumque eum, non facilis at repellat hic explicabo illum aliquam? Voluptas ratione odio laboriosam corporis, dolor commodi hic quaerat labore ea voluptatem tempora accusamus sequi? At quisquam totam, vel atque aut, aspernatur nisi maxime qui quos ex minus laborum debitis facilis, aliquam eveniet quas molestias nemo. Doloremque deserunt reiciendis eum odio aperiam, voluptatem et similique suscipit vero aut. Rerum autem commodi voluptatem perspiciatis sequi, doloribus possimus qui. Deserunt consequuntur laborum dolores accusamus, ad dignissimos cum alias quae. Cumque quidem nisi pariatur? Exercitationem omnis iusto aliquid aspernatur quod et dolore animi molestias sapiente vitae, ducimus nihil blanditiis possimus, quos tempora ullam inventore itaque architecto? Voluptatum accusamus, sunt delectus incidunt nam, beatae deserunt a deleniti ea, illum aperiam expedita dolor eligendi vitae asperiores fuga quae autem nobis accusantium? Tempore, a.
+                <p>A tecnologia DTF (Direct to Film) revolucionou o mercado de personalização têxtil, oferecendo estampas com alta qualidade, cores vibrantes e excelente durabilidade. O processo consiste na impressão da arte em um filme especial, que posteriormente é transferido para o tecido através de calor e pressão. Essa técnica permite reproduzir detalhes com grande precisão, mantendo a fidelidade das cores e proporcionando um acabamento profissional.
                 </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores enim, aliquam voluptatibus possimus sed ea atque dolorem tempora rem earum, quam dolore ad molestias praesentium aperiam odio maxime. Esse aperiam expedita consequuntur eveniet quasi, deleniti sequi. Officia facilis, blanditiis possimus ipsum reprehenderit exercitationem aperiam delectus eaque repellendus esse qui vero inventore? Sed voluptatum laboriosam consectetur doloribus nam? Autem perferendis tempore omnis voluptas quam officia voluptates reiciendis nulla! Distinctio, sed deleniti ab blanditiis magnam error, officia, ea voluptas veritatis sit eveniet ducimus ipsa. Molestiae debitis obcaecati, mollitia non odio soluta, quasi voluptate neque vero ipsa eveniet facere quisquam culpa hic eaque.</p>
+                <p>Uma das principais vantagens do DTF Têxtil é sua versatilidade. As estampas podem ser aplicadas em diversos tipos de tecidos, como algodão, poliéster e mistos, sem a necessidade de tratamentos complexos. Além disso, apresentam ótima resistência às lavagens e ao uso diário, tornando-se uma excelente opção para marcas de roupas, uniformes, brindes personalizados e projetos criativos que exigem qualidade e praticidade.</p>
             </div>
 
             <div class="container_dentro">
@@ -279,7 +346,7 @@
                     <div class="contato-icone">💬</div>
                     <div>
                         <strong>WhatsApp</strong>
-                        <a href="https://wa.me/55XXXXXX" target="_blank">(XX) XXXXX-XXXX</a>
+                        <a href="https://wa.me/55XXXXXX" target="_blank">(51) 99015-7080</a>
                     </div>
                 </div>
 
@@ -287,7 +354,7 @@
                     <div class="contato-icone">📧</div>
                     <div>
                         <strong>E-mail</strong>
-                        <a href="mailto:XXXX">tsa@gmail.com.br</a>
+                        <a href="mailto:XXXX">contato@tsaflex.com.br</a>
                     </div>
                 </div>
 
