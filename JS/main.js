@@ -77,3 +77,43 @@ function enviarFormulario(e) {
     const url = `https://wa.me/5551990157080?text=${encodeURIComponent(texto)}`;
     window.open(url, '_blank');
 }
+
+function desactive() {
+    if (document.getElementById('menu-toggle').checked == true) {
+        document.getElementById('menu-toggle').checked = false
+    }
+}
+
+const themeToggle = document.getElementById('theme-toggle');
+const iconmoon = document.getElementById('icon-moon')
+const iconsun = document.getElementById('icon-sun')
+const html = document.documentElement;
+
+const temaSalvo = localStorage.getItem('tema') || 'dark';
+html.setAttribute('data-theme', temaSalvo);
+atualizarIcone(temaSalvo);
+
+themeToggle.addEventListener('click', () => {
+    const temaAtual = html.getAttribute('data-theme');
+    const novoTema = temaAtual === 'dark' ? 'light' : 'dark';
+
+    html.setAttribute('data-theme', novoTema);
+    localStorage.setItem('tema', novoTema);
+    atualizarIcone(novoTema);
+})
+
+function atualizarIcone(tema) {
+    if (tema === 'dark') {
+        iconmoon.style.display = 'block';
+        iconsun.style.display = 'none';
+        document.querySelectorAll('img[src="./ASSETS/Logo TSA - Flex Light Mode.png"]').forEach(img => {
+            img.src = './ASSETS/Logo TSA - Flex Dark Mode.png';
+        });
+    } else {
+        iconsun.style.display = 'block';
+        iconmoon.style.display = 'none';
+        document.querySelectorAll('img[src="./ASSETS/Logo TSA - Flex Dark Mode.png"]').forEach(img => {
+            img.src = './ASSETS/Logo TSA - Flex Light Mode.png';
+        });
+    }
+}
