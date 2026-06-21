@@ -26,7 +26,9 @@
     <!-- HEADER -->
 
     <header>
-        <img src="./ASSETS/Logo TSA - Flex.png" alt="TSA - Flex">
+        <a href="#inicio">
+            <img src="./ASSETS/Logo TSA - Flex Dark Mode.png" alt="TSA - Flex">
+        </a>
 
         <div class="navbar">
             <input type="checkbox" id="menu-toggle">
@@ -34,13 +36,10 @@
 
 
             <ul class="nav-links">
-                <li><a href="#inicio">Início</a></li>
-                <p>|</p>
-                <li><a href="#produtos">Produtos</a></li>
-                <p>|</p>
-                <li><a href="#sobre">Sobre</a></li>
-                <p>|</p>
-                <li><a href="#contato">Contato</a></li>
+                <li><a onclick="desactive()" href="#inicio">Início</a></li>
+                <li><a onclick="desactive()" href="#produtos">Produtos</a></li>
+                <li><a onclick="desactive()" href="#sobre">Sobre</a></li>
+                <li><a onclick="desactive()" href="#contato">Contato</a></li>
             </ul>
         </div>
     </header>
@@ -65,9 +64,9 @@
             </p>
 
             <div class="inicio-btn">
-                <button class="btn-primario">
+                <a href="https://wa.me/5551990157080" target="_blank" class="btn-primario">
                     Comprar Agora
-                </button>
+                </a>
 
                 <a href="#catalago" class="btn-secundario">
                     Ver Catálogo
@@ -91,142 +90,144 @@
             </div>
         </div>
 
-        <h2 id="catalago">Nosso <span>catálogo</span></h2>
+        <div class="ctlago">
+            <h2 id="catalago">Nosso <span>catálogo</span></h2>
 
-        <p class="subtitulo">Estampas de alta qualidade para transformar qualquer peça</p>
+            <p class="subtitulo">Estampas de alta qualidade para transformar qualquer peça</p>
 
-        <!--  CARROSSEL ESTAMPAS BÁSICAS -->
+            <!--  CARROSSEL ESTAMPAS BÁSICAS -->
 
-        <h3>Estampas Básicas</h3>
+            <h3 style="text-align: center;">Estampas Básicas</h3>
 
-        <div class="carousel">
-            <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-container">
 
-                <button class="carousel-btn-ant">&#8249;</button>
-                <button class="carousel-btn-prox">&#8250;</button>
+                    <button class="carousel-btn-ant">&#8249;</button>
+                    <button class="carousel-btn-prox">&#8250;</button>
 
-                <div class="carousel-faixa">
+                    <div class="carousel-faixa">
 
-                    <div class="card">
-                        <img class="card-img" src="#" alt="Estampa #">
-                        <div class="card-body">
-                            <span class="card-tag">Básica</span>
-                            <div class="card-titulo">Estampa #</div>
-                            <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
-                            <div class="card-preco">R$ # <small>/ unid.</small></div>
+                        <div class="card">
+                            <img class="card-img" src="#" alt="Estampa #">
+                            <div class="card-body">
+                                <span class="card-tag">Básica</span>
+                                <div class="card-titulo">Estampa #</div>
+                                <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
+                                <div class="card-preco">R$ # <small>/ unid.</small></div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card">
-                        <img class="card-img" src="#" alt="Estampa #">
-                        <div class="card-body">
-                            <span class="card-tag">Básica</span>
-                            <div class="card-titulo">Estampa #</div>
-                            <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
-                            <div class="card-preco">R$ # <small>/ unid.</small></div>
+                        <div class="card">
+                            <img class="card-img" src="#" alt="Estampa #">
+                            <div class="card-body">
+                                <span class="card-tag">Básica</span>
+                                <div class="card-titulo">Estampa #</div>
+                                <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
+                                <div class="card-preco">R$ # <small>/ unid.</small></div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card">
-                        <img class="card-img" src="#" alt="Estampa #">
-                        <div class="card-body">
-                            <span class="card-tag">Básica</span>
-                            <div class="card-titulo">Estampa #</div>
-                            <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
-                            <div class="card-preco">R$ # <small>/ unid.</small></div>
+                        <div class="card">
+                            <img class="card-img" src="#" alt="Estampa #">
+                            <div class="card-body">
+                                <span class="card-tag">Básica</span>
+                                <div class="card-titulo">Estampa #</div>
+                                <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
+                                <div class="card-preco">R$ # <small>/ unid.</small></div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card">
-                        <img class="card-img" src="#" alt="Estampa #">
-                        <div class="card-body">
-                            <span class="card-tag">Básica</span>
-                            <div class="card-titulo">Estampa #</div>
-                            <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
-                            <div class="card-preco">R$ # <small>/ unid.</small></div>
+                        <div class="card">
+                            <img class="card-img" src="#" alt="Estampa #">
+                            <div class="card-body">
+                                <span class="card-tag">Básica</span>
+                                <div class="card-titulo">Estampa #</div>
+                                <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
+                                <div class="card-preco">R$ # <small>/ unid.</small></div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card">
-                        <img class="card-img" src="#" alt="Estampa #">
-                        <div class="card-body">
-                            <span class="card-tag">Básica</span>
-                            <div class="card-titulo">Estampa #</div>
-                            <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
-                            <div class="card-preco">R$ # <small>/ unid.</small></div>
+                        <div class="card">
+                            <img class="card-img" src="#" alt="Estampa #">
+                            <div class="card-body">
+                                <span class="card-tag">Básica</span>
+                                <div class="card-titulo">Estampa #</div>
+                                <div class="card-desc">Padrões modernos com aplicação fácil a ferro quente.</div>
+                                <div class="card-preco">R$ # <small>/ unid.</small></div>
+                            </div>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
+
+                <div class="carousel-ponto"></div>
             </div>
 
-            <div class="carousel-ponto"></div>
-        </div>
+            <!-- CARROSSEL ESTAMPAS PERSONALIZADAS -->
 
-        <!-- CARROSSEL ESTAMPAS PERSONALIZADAS -->
+            <h3 style="text-align: center;">Estampas Personalizadas</h3>
 
-        <h3>Estampas Personalizadas</h3>
+            <div class="carousel">
+                <div class="carousel-container">
 
-        <div class="carousel">
-            <div class="carousel-container">
+                    <button class="carousel-btn-ant">&#8249;</button>
+                    <button class="carousel-btn-prox">&#8250;</button>
 
-                <button class="carousel-btn-ant">&#8249;</button>
-                <button class="carousel-btn-prox">&#8250;</button>
+                    <div class="carousel-faixa">
 
-                <div class="carousel-faixa">
-
-                    <div class="card">
-                        <img class="card-img" src="#" alt="Logo da Marca">
-                        <div class="card-body">
-                            <span class="card-tag">Personalizada</span>
-                            <div class="card-titulo">Logo da Marca</div>
-                            <div class="card-desc">Sua logo em alta definição, perfeita para uniformes.</div>
-                            <div class="card-preco">R$ # <small>/ unid.</small></div>
+                        <div class="card">
+                            <img class="card-img" src="#" alt="Logo da Marca">
+                            <div class="card-body">
+                                <span class="card-tag">Personalizada</span>
+                                <div class="card-titulo">Logo da Marca</div>
+                                <div class="card-desc">Sua logo em alta definição, perfeita para uniformes.</div>
+                                <div class="card-preco">R$ # <small>/ unid.</small></div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card">
-                        <img class="card-img" src="#" alt="Arte Full Print">
-                        <div class="card-body">
-                            <span class="card-tag">Personalizada</span>
-                            <div class="card-titulo">Arte Full Print</div>
-                            <div class="card-desc">Estampa que cobre toda a peça com sua arte exclusiva.</div>
-                            <div class="card-preco">R$ # <small>/ unid.</small></div>
+                        <div class="card">
+                            <img class="card-img" src="#" alt="Arte Full Print">
+                            <div class="card-body">
+                                <span class="card-tag">Personalizada</span>
+                                <div class="card-titulo">Arte Full Print</div>
+                                <div class="card-desc">Estampa que cobre toda a peça com sua arte exclusiva.</div>
+                                <div class="card-preco">R$ # <small>/ unid.</small></div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card">
-                        <img class="card-img" src="#" alt="Nome e Número">
-                        <div class="card-body">
-                            <span class="card-tag">Personalizada</span>
-                            <div class="card-titulo">Nome + Número</div>
-                            <div class="card-desc">Ideal para times, eventos e uniformes esportivos.</div>
-                            <div class="card-preco">R$ # <small>/ unid.</small></div>
+                        <div class="card">
+                            <img class="card-img" src="#" alt="Nome e Número">
+                            <div class="card-body">
+                                <span class="card-tag">Personalizada</span>
+                                <div class="card-titulo">Nome + Número</div>
+                                <div class="card-desc">Ideal para times, eventos e uniformes esportivos.</div>
+                                <div class="card-preco">R$ # <small>/ unid.</small></div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card">
-                        <img class="card-img" src="#" alt="Ilustração Custom">
-                        <div class="card-body">
-                            <span class="card-tag">Personalizada</span>
-                            <div class="card-titulo">Ilustração Custom</div>
-                            <div class="card-desc">Envie sua arte e nós aplicamos com máxima fidelidade.</div>
-                            <div class="card-preco">R$ # <small>/ unid.</small></div>
+                        <div class="card">
+                            <img class="card-img" src="#" alt="Ilustração Custom">
+                            <div class="card-body">
+                                <span class="card-tag">Personalizada</span>
+                                <div class="card-titulo">Ilustração Custom</div>
+                                <div class="card-desc">Envie sua arte e nós aplicamos com máxima fidelidade.</div>
+                                <div class="card-preco">R$ # <small>/ unid.</small></div>
+                            </div>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
+
+                <div class="carousel-ponto"></div>
             </div>
-
-            <div class="carousel-ponto"></div>
         </div>
-
+        
     </section>
 
     <!-- SOBRE -->
 
     <section id="sobre">
-        <h2>Seja bem vindo a <span>TSA Flex</span></h2>
+        <h2>Seja bem-vindo a <span>TSA Flex</span></h2>
 
         <p class="subtitulo">Conheça um pouco sobre nós</p>
 
@@ -377,6 +378,16 @@
                 d="M16 0C7.163 0 0 7.163 0 16c0 2.827.737 5.48 2.027 7.785L0 32l8.418-2.007A15.93 15.93 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.07 22.26c-.34.953-1.99 1.826-2.742 1.943-.72.112-1.625.159-2.623-.165a23.9 23.9 0 0 1-2.372-.876C12.2 21.4 9.9 18.3 9.72 18.06c-.18-.24-1.46-1.94-1.46-3.7s.924-2.628 1.252-2.986c.328-.358.716-.448.955-.448.238 0 .477.002.685.013.22.012.515-.083.806.615.298.716 1.013 2.476 1.102 2.655.09.18.15.39.03.63-.12.24-.18.39-.358.598-.18.21-.378.468-.539.629-.18.18-.367.374-.157.733.209.358.929 1.528 1.993 2.474 1.368 1.22 2.522 1.597 2.882 1.776.358.18.567.15.776-.09.209-.24.895-1.044 1.134-1.403.239-.358.478-.299.806-.18.328.12 2.085.984 2.443 1.163.358.18.597.269.686.418.09.15.09.868-.25 1.822z" />
         </svg>
     </a>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
     <script src="./JS/main.js"></script>
 </body>
 

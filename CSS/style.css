@@ -5,18 +5,44 @@
     scroll-behavior: smooth;
 }
 
+:root {
+  color-scheme: light dark; /* Informa que o site suporta ambos os modos */
+  
+  /* Uso do recurso nativo light-dark() */
+  --bg-color: light-dark(white, #0f172a);
+  --text-color: light-dark(#0f172a, white);
+  --text-p: light-dark(#0f172a, #cbd5e1);
+  --card-body: light-dark(rgba(120, 154, 192, 0.445), #1e293b);
+  --card-hover: light-dark(white, #38bdf8);
+  --card-bg-tag: light-dark(rgba(0, 0, 0, 0.15), rgba(56, 189, 248, 0.15));
+  --card-text-tag: light-dark(white, #38bdf8);
+  --card-desc: light-dark(rgba(63, 80, 100, 0.445), #94a3b8);
+  --btn-bg: light-dark( white, rgb(56, 189, 248));
+  --btn-borda: light-dark ( white, #38bdf8);
+  --btn-text: light-dark (rgba(0, 0, 0, 0.15), #38bdf8)
+}
+
 body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* body {
     font-family: 'Inter', sans-serif;
     background: #0f172a;
     color: white;
-}
+} */
 
 span { 
     color: #38bdf8; 
 }
+
 h1, h2, h3, .logo {
     font-family: 'Montserrat', sans-serif;
 }
+
 a {
     text-decoration: none;
     transition: color .2s;
@@ -37,6 +63,7 @@ li {
 }
 
 .container {
+    min-height: 100vh;
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -46,9 +73,9 @@ li {
 }
 
 .container img {
-    height: auto;
+    height: 50%;
     width: 100%;
-    max-width: 400px;
+    max-width: 50%;
 }
 
 .container_dentro {
@@ -72,7 +99,7 @@ header {
     position: fixed;
     top: 0;
 
-    background: rgba(15, 23, 42, 0.685);
+    background: rgba(var(--bg-color), 0.685);
 
     backdrop-filter: blur(10px);
 
@@ -80,10 +107,11 @@ header {
 }
 
 header img {
-    margin: -88px 0px -100px 0px;
+    margin: 10px 0px 0px 0px;
     width: 180px;
-    filter: saturate(310%) hue-rotate(320deg);
-    pointer-events: none;
+    height: 70px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .navbar {
@@ -100,7 +128,7 @@ header img {
 }
 
 .nav-links a {
-    color: white;
+    color: var(--text-color);
     font-size: 16px;
 }
 
@@ -126,13 +154,13 @@ a:hover {
     background: 
         linear-gradient(
             to bottom,
-            transparent 0%,
-            rgba(15, 23, 42)
+            transparent 40%,
+            var(--bg-color)
         ),
         linear-gradient(
             to right,
-            rgba(15, 23, 42, 0.95) 35%,
-            rgba(15, 23, 42, 0.3) 100%
+            var(--bg-color) 20%,
+            rgba(15, 23, 42, 0.3) 200%
         );
     z-index: 0;
 }
@@ -142,7 +170,6 @@ a:hover {
 
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
     padding: 140px 8% 80px;
     background-image: url('../ASSETS/Imagem\ Inicio.png');
     background-size: cover;
@@ -172,7 +199,7 @@ a:hover {
 .texto-inicio p {
     font-size: 18px;
     line-height: 1.7;
-    color: #cbd5e1;
+    color: var(--text-p);
     margin-bottom: 30px;
 }
 
@@ -190,13 +217,23 @@ a:hover {
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primario:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+.inicio-btn a:nth-child(1):hover {
+    color: white;
 }
 
 .btn-secundario {
     padding: 15px 30px;
     background: transparent;
     border: 1px solid #334155;
-    color: white;
+    color: var(--text-color);
     border-radius: 12px;
     cursor: pointer;
 }
@@ -205,7 +242,7 @@ a:hover {
 
 #produtos {
     scroll-margin-top: 75px;
-    padding: 80px 8%;
+    /* padding: 80px 8%; */
 }
 
 #produtos h2 {
@@ -224,8 +261,12 @@ a:hover {
 }
 
 #catalago {
-    scroll-margin-top: 75px;
+    scroll-margin-top: 90px;
     padding: 40px 0px 0px 0px;
+}
+
+.ctlago {
+    min-height: 100vh;
 }
 
 /* CARROSEL */
@@ -259,7 +300,7 @@ a:hover {
 }
 
 .card-body {
-    background: #1e293b;
+    background: var(--card-body);
     border: 1px solid #334155;
     border-top: none;
     border-radius: 0 0 12px 12px;
@@ -268,12 +309,12 @@ a:hover {
 }
 
 .card-body:hover { 
-    border-color: #38bdf8; 
+    border-color: var(--card-hover); 
 }
 
 .card-tag {
-    background: rgba(56, 189, 248, .15);
-    color: #38bdf8;
+    background: var(--card-bg-tag);
+    color: var(--card-text-tag);
     padding: 3px 10px;
     border-radius: 50px;
     font-size: 11px;
@@ -292,7 +333,7 @@ a:hover {
 
 .card-desc { 
     font-size: 13px; 
-    color: #94a3b8; 
+    color: var(--card-desc); 
     line-height: 1.5;
     margin-bottom: 12px; 
 }
@@ -300,12 +341,12 @@ a:hover {
 .card-preco { 
     font-size: 19px; 
     font-weight: 700; 
-    color: #38bdf8; 
+    color: var(--card-text-tag); 
 }
 
 .card-preco small { 
     font-size: 12px; 
-    color: #64748b; 
+    color: var(--card-desc); 
     font-weight: 400; 
     margin-left: 3px; 
 }
@@ -318,10 +359,10 @@ a:hover {
     transform: translateY(-50%);
     width: 40px;
     height: 40px;
-    background: rgba(56, 189, 248, .15);
-    border: 1px solid #38bdf8;
+    background: rgba(var(--btn-bg) .15);
+    border: 1px solid var(--btn-borda);
     border-radius: 50%;
-    color: #38bdf8;
+    color: var(--btn-text);
     font-size: 22px;
     display: flex;
     align-items: center;
@@ -722,6 +763,10 @@ footer {
         transition: transform 0.3s ease;
     }
 
+    #sobre .container_dentro:nth-child(1) {
+        max-width: 100%;
+    }
+
     .contato-container {
         grid-template-columns: 1fr;
     }
@@ -740,4 +785,11 @@ footer {
         width: 50px;
         height: 50px;
     }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #111827;
+    --text-color: #f3f4f6;
+  }
 }
