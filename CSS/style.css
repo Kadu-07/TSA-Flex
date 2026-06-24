@@ -355,10 +355,15 @@ a:hover {
 }
 
 #produtos h2 {
-    font-size: 36px;
+    font-size: 40px;
     text-align: center;
     margin-bottom: 10px;
 }
+
+#produtos p:nth-of-type(1),
+#produtos p:nth-of-type(2) {
+    font-size: 20px;
+} 
 
 #produtos h3 {
     font-size: 16px;
@@ -401,7 +406,7 @@ a:hover {
 
 .card-img {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
     display: block;
     border-radius: 12px 12px 0 0;
@@ -535,6 +540,11 @@ a:hover {
     margin-bottom: 10px;
 }
 
+#sobre:nth-child(1) p,
+#sobre :first-of-type p {
+    font-size: 20px;
+}
+
 #sobre .container_dentro:nth-child(1) {
     max-width: 60%;
 }
@@ -550,6 +560,7 @@ a:hover {
 /* CONTATO */
 
 #contato {
+    min-height: 100vh;
     scroll-margin-top: 75px;
     padding: 80px 8%;
 }
