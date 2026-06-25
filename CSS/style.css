@@ -889,6 +889,22 @@ footer {
         margin: 15px 0;
     }
 
+    .carousel-faixa {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .carousel-faixa::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card {
+        scroll-snap-align: center;
+        min-width: 85%;
+    }
+
     .menu-icon {
         display: block;
         font-size: 28px;
