@@ -5,6 +5,7 @@
     scroll-behavior: smooth;
 
     transition: background-color 0.3s, color 0.3s;
+    max-width: 100%;
 }
 
 :root {
@@ -25,10 +26,10 @@
     --card-bg-tag: light-dark(rgba(13, 32, 63, 0.1), rgba(56, 189, 248, 0.15));
     --card-text-tag: light-dark(#0d203f, #38bdf8);
     --card-desc: light-dark(#46618a, #94a3b8);
-    --btn-bg: light-dark(rgba(13, 32, 63, 0.12), rgba(56, 189, 248, 0.15));
-    --btn-borda: light-dark(#0d203f, #38bdf8);
-    --btn-text: light-dark(#0d203f, #38bdf8);
-    --btn-hover-bg: light-dark(#0d203f, #38bdf8);
+    --btn-bg: light-dark(rgba(255, 255, 255, 0.12), rgba(56, 189, 248, 0.15));
+    --btn-borda: light-dark(#bebebe, #38bdf8);
+    --btn-text: light-dark(#d4d4d4, #38bdf8);
+    --btn-hover-bg: light-dark(#4d6da0, #38bdf8);
     --btn-hover-text: light-dark(white, #0f172a);
     --car-pont: light-dark(#c2cee0, #334155);
     --car-pont-ativ: light-dark(#0d203f, #38bdf8);
@@ -115,6 +116,17 @@ body {
     color: var(--text-color);
 }
 
+body h1,
+body h2,
+body h3,
+body p,
+body a,
+body li,
+body div,
+body small,
+body strong {
+    transition: color 1s;
+}
 
 span {
     color: #38bdf8;
@@ -354,10 +366,15 @@ a:hover {
 }
 
 #produtos h2 {
-    font-size: 36px;
+    font-size: 40px;
     text-align: center;
     margin-bottom: 10px;
 }
+
+#produtos p:nth-of-type(1),
+#produtos p:nth-of-type(2) {
+    font-size: 20px;
+} 
 
 #produtos h3 {
     font-size: 16px;
@@ -400,7 +417,7 @@ a:hover {
 
 .card-img {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
     display: block;
     border-radius: 12px 12px 0 0;
@@ -534,6 +551,11 @@ a:hover {
     margin-bottom: 10px;
 }
 
+#sobre:nth-child(1) p,
+#sobre :first-of-type p {
+    font-size: 20px;
+}
+
 #sobre .container_dentro:nth-child(1) {
     max-width: 60%;
 }
@@ -549,6 +571,7 @@ a:hover {
 /* CONTATO */
 
 #contato {
+    min-height: 100vh;
     scroll-margin-top: 75px;
     padding: 80px 8%;
 }
@@ -864,6 +887,22 @@ footer {
 
     .nav-links li {
         margin: 15px 0;
+    }
+
+    .carousel-faixa {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .carousel-faixa::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card {
+        scroll-snap-align: center;
+        min-width: 85%;
     }
 
     .menu-icon {
