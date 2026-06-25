@@ -88,10 +88,18 @@ document.querySelectorAll('.carousel').forEach(carousel => {
     btnProx.addEventListener('click', () => irPara(slideAtual + 1));
 
     // Reinicia ao redimensionar a janela
+    let larguraAnterior = window.innerWidth;
+
     window.addEventListener('resize', () => {
+        const larguraAtual = window.innerWidth;
+        
+        if (larguraAtual === larguraAnterior) return;
+
+        larguraAnterior = larguraAtual;
+
         criarPontos();
         irPara(0);
-        faixa.style.transform = `translateX(0px)`
+        faixa.style.transform = `translateX(0px)`;
     });
 
     // Inicializa
