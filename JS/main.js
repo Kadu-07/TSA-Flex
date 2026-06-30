@@ -7,6 +7,12 @@ document.querySelectorAll('.carousel').forEach(carousel => {
 
     let slideAtual = 0;
 
+    // Verificicar se é um celular
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+
+
     // Quantos cards cabem por vez, dependendo da largura da tela
     function visiveis() {
         if (window.innerWidth <= 768)  return 1;
@@ -42,23 +48,58 @@ document.querySelectorAll('.carousel').forEach(carousel => {
             slideAtual = index
         }
 
-        // Largura de um card + gap (20px)
-        const larguraCard = cards[0].offsetWidth + 20;
-        faixa.style.transform = `translateX(${-slideAtual * larguraCard}px)`;
+         if (isMobile()) {
+            // No mobile, rola o container nativamente até o card
+            const card = cards[slideAtual];
+            faixa.scrollTo({
+                left: card.offsetLeft - faixa.offsetLeft,
+                behavior: 'smooth'
+            });
+        } else {
+            // No desktop, continua usando translateX
+            const larguraCard = cards[0].offsetWidth + 20;
+            faixa.style.transform = `translateX(${-slideAtual * larguraCard}px)`;
+        }
 
-        // Atualiza pontos
+        // // Largura de um card + gap (20px)
+        atualizarPontos()
+    }
+
+    function atualizarPontos() {
         pontosDiv.querySelectorAll('button').forEach((btn, i) => {
             btn.classList.toggle('ativo', i === slideAtual);
         });
     }
 
+    let scrollTimeout;
+    faixa.addEventListener('scroll', () => {
+        if (!isMobile()) return;
+
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            const larguraCard = cards[0].offsetWidth + 20;
+            const indexMaisProximo = Math.round(faixa.scrollLeft / larguraCard);
+            slideAtual = Math.min(indexMaisProximo, totalSlides());
+            atualizarPontos();
+        }, 0);
+    });
+
     btnAnt.addEventListener('click',  () => irPara(slideAtual - 1));
     btnProx.addEventListener('click', () => irPara(slideAtual + 1));
 
     // Reinicia ao redimensionar a janela
+    let larguraAnterior = window.innerWidth;
+
     window.addEventListener('resize', () => {
+        const larguraAtual = window.innerWidth;
+        
+        if (larguraAtual === larguraAnterior) return;
+
+        larguraAnterior = larguraAtual;
+
         criarPontos();
         irPara(0);
+        faixa.style.transform = `translateX(0px)`;
     });
 
     // Inicializa
